@@ -16,6 +16,7 @@ export const onGet: RequestHandler<PageData> = async () => {
         "GhostJester#1468",
         token?.access_token!
     );
+    console.log("profile: ", profile);
     return profile;
 };
 export default component$(() => {

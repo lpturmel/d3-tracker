@@ -6,7 +6,6 @@ interface HeroItemProps {
 }
 const HeroItem = component$<HeroItemProps>(({ hero }) => {
     const state = useStore({ enabled: false });
-    console.log(hero);
     const onChange = (e: any) => {
         state.enabled = e.target.checked;
     };

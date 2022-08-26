@@ -1,3 +1,5 @@
+import { ProfileData } from "../../types/api/profile";
+
 export const getProfileData = async (
     accountId: string,
     accessToken: string
@@ -12,12 +14,6 @@ export const getProfileData = async (
         },
     });
 
-    if (profileResponse.status === 200) {
-        const profile = await profileResponse.json();
-        return profile;
-    } else {
-        console.log("Profile request response code: ", profileResponse.status);
-        console.log(await profileResponse.text());
-    }
-    return null;
+    const profile = (await profileResponse.json()) as ProfileData;
+    return profile;
 };
