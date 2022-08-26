@@ -24,7 +24,7 @@ export default component$(() => {
         <div>
             <h1>Welcome to D3 Tracker</h1>
 
-            <p>The Diablo III character tracker</p>
+            <p>The Diablo III character tracker!</p>
             <Resource
                 value={profileData}
                 onPending={() => <p>Loading player profile... </p>}
